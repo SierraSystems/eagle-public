@@ -1,0 +1,19 @@
+version: "2"
+
+services:
+  ####################### FrontEnd Definition #######################
+  frontend:
+    container_name: eagle_frontend
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 4300:4300
+    volumes:
+      - ./src/:/app/src/
+    networks:
+      - eagle
+####################### Networks Definition #######################
+networks:
+  eagle:
+    driver: "bridge"
