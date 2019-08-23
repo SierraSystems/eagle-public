@@ -5,5 +5,5 @@ WORKDIR /app
 COPY . /app
 RUN npm i
 
-CMD [ "npm", "start" ]
 EXPOSE 4300
+CMD [ "npm", "start" ]
